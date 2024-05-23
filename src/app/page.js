@@ -1,6 +1,4 @@
 "use client"
-import Image from "next/image";
-import styles from "./page.module.css";
 import { Col, Container, Row } from "react-bootstrap";
 import BookCard from "@/components/bookCard";
 

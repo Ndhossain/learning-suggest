@@ -1,1 +1,5 @@
-
+.eyeIconContainer {
+    position: absolute; 
+    top: 62%;
+    right: 10px;
+}

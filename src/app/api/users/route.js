@@ -13,8 +13,8 @@ export async function GET(req, res) {
 
 export async function POST(req, res) {
   try {
-    const body = await req.json();
-    let query = `INSERT INTO users ("userName", email, password, adress) VALUES ('${body.userName}', '${body.userEmail}', '${body.password}', '${body.adress}');`;
+    const body = await req.formData();
+    let query = `INSERT INTO users ("userName", email, password, adress) VALUES ('${body.get('name')}', '${body.get('email')}', '${body.get("password")}', null);`;
     const result = await pool.query(query);
     return NextResponse.json({ result: result }, { status: 200 });
   } catch (err) {
